@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
     <div class="navbar-header">
-      <v-icon icon="mdi-vpn"></v-icon>
-      <p class="navbar-header-text">AIM-senior project</p>
+      <!-- <v-icon icon="mdi-vpn"></v-icon> -->
+      <p class="navbar-header-text">JIRAT senior project</p>
     </div>
     <v-icon icon="mdi-menu" v-if="isMobile" @click="clickMenuIcon"></v-icon>
   </div>

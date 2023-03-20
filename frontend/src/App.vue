@@ -8,7 +8,7 @@
         @clickMenu="clickMenu"
         @clickMenuIcon="clickMenuIcon"
       />
-      <Content :state="state" />
+      <Content :state="state" /> 
     </v-container>
   </div>
 </template>

@@ -2,19 +2,10 @@
   <div>
     <div class="wrapper" @click="handlerWrapper" v-if="showWrapper()"></div>
     <v-card class="menu" :class="{ mobile: isMobile }" v-if="showMenu()">
-      <div
-        class="menu-container"
-        v-for="item in lists"
-        :key="item"
-        @click="selectMenu(item.index)"
-      >
+      <div class="menu-container" v-for="item in lists" :key="item" @click="selectMenu(item.index)">
         <p class="menu-text">
-          {{ item.text }} {{ menuState }}
-          <v-icon
-            icon="mdi-triangle-small-up"
-            v-if="showIcon(item.index)"
-            class="menu-icon"
-          ></v-icon>
+          {{ item.text }}
+          <v-icon icon="mdi-triangle-small-up" v-if="showIcon(item.index)" class="menu-icon"></v-icon>
         </p>
         <v-divider></v-divider>
       </div>
@@ -105,11 +96,13 @@ export default {
   width: 360px;
   height: fit-content;
 }
+
 .menu-container {
   width: 100%;
   padding: 0 8px;
   transition: 0.2s;
 }
+
 .menu-container:hover {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -121,6 +114,7 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
 .menu-icon {
   color: rgb(66, 78, 255);
   transform: rotate(270deg);
@@ -133,6 +127,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .wrapper {
   position: fixed;
   z-index: 80;
